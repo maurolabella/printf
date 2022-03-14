@@ -1,8 +1,9 @@
+#include "main.h"
 
 /**
  * fetch_function - pick the function
- * @c: character used to match
- * Returns: NULL in case no match, a function otherwise
+ * @s: character used to match
+ * Return: NULL in case no match, a function otherwise
  */
 int (*fetch_function(char s))(va_list)
 {

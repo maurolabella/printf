@@ -2,8 +2,8 @@
 
 /**
  * wrong_inputs - verify wrong input presence
- * @s: string to be controlled
- * Returns: true or false
+ * @p: string to be controlled
+ * Return: true or false
  */
 int wrong_inputs(const char *p)
 {

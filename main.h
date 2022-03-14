@@ -21,7 +21,7 @@ typedef struct handler
 } ph;
 
 /**
- * struct flag_tree: to deal with modifiers
+ * struct flag_tree - to deal with modifiers
  * had to include stdbool
  * @mas: flag for the + symbol
  * @space: flag for the space symbol
@@ -61,10 +61,4 @@ int _printf(const char *format, ...);
 /*fetching*/
 int (*fetch_function(char c))(va_list);
 
-#include "writing_functions.c"
-#include "wrong_inputs.c"
-#include "printing_functions.c"
-#include "_printf.c"
-
 #endif
-
