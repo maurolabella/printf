@@ -39,13 +39,15 @@ int _printf(const char *format, ...)
 	va_list temp;
 	const char *s = format;
 
-	va_start(temp, format);
+	if (format == NULL)
+		return (-1);
 
+	va_start(temp, format);
 	assert(wrong_inputs(s));
 
 	while (*s != '\0')
 	{
-		if (*s == '%')
+		if (*s == '%' && s != NULL)
 		{
 			switch (*++s)
 			{
