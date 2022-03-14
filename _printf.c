@@ -14,6 +14,10 @@ int (*fetch_function(char s))(va_list)
 		{'s', print_string},
 		{'c', print_char},
 		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_hexa},
+		{'X', print_HEXA},
+		{'p', print_address},
 		{'\0', '\0'}};
 
 	for (i = 0; print_arr[i].c; i++)

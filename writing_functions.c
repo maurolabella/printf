@@ -22,7 +22,7 @@ int _putchar(char c)
 	{
 		buffer[i] = c;
 		i++;
-	}
+i	}
 	return (1);
 }
 

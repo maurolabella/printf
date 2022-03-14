@@ -43,6 +43,10 @@ int counting_digits(int n);
 int print_int(va_list temp);
 int print_unsigned(va_list temp);
 char *convert(unsigned long int num, int base, int lowercase);
+int print_octal(va_list temp);
+int print_hexa(va_list temp);
+int print_HEXA(va_list temp);
+int print_address(va_list temp);
 
 /**control*/
 int wrong_inputs(const char *p);
