@@ -20,7 +20,7 @@ int print_string(va_list temp)
 	char *s = va_arg(temp, char *);
 
 	if (!s)
-		s = "(null)";
+		s = "(nil)";
 	return (_puts(s));
 }
 
