@@ -19,7 +19,7 @@ int print_string(va_list temp)
 {
 	char *s = va_arg(temp, char *);
 
-	if (!s)
+	if (s == NULL)
 		s = "(null)";
 	return (_puts(s));
 }

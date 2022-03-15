@@ -19,8 +19,6 @@ int (*fetch_function(char s))(va_list)
 		{'x', print_hexa},
 		{'X', print_HEXA},
 		{'p', print_address},
-		{'S', print_bigs},
-		{'b', print_binary},
 		{'\0', '\0'}};
 
 	for (i = 0; print_arr[i].c; i++)
@@ -45,7 +43,9 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(temp, format);
-	assert(wrong_inputs(s));
+
+	if (wrong_inputs(s) == 0)
+		return (-1);
 
 	while (*s != '\0')
 	{
@@ -61,7 +61,7 @@ int _printf(const char *format, ...)
 			default:
 			{
 				print_func = fetch_function(*s);
-				len += (print_func) ? print_func(temp) : _printf("%%%c", *s);
+				len += (print_func) ? print_func(temp) : _putchar('%') + _putchar(*s);
 				break;
 			}
 			}

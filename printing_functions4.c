@@ -1,6 +1,4 @@
-#include"main.h"
-
-
+#include "main.h"
 
 /**
  * print_binary - prints a number in base 2
@@ -14,4 +12,3 @@ int print_binary(va_list temp)
 
 	return (_puts(str));
 }
-

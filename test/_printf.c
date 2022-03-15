@@ -43,7 +43,9 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(temp, format);
-	assert(wrong_inputs(s));
+
+	if (wrong_inputs(s) == 0)
+		return (-1);
 
 	while (*s != '\0')
 	{
@@ -59,14 +61,14 @@ int _printf(const char *format, ...)
 			default:
 			{
 				print_func = fetch_function(*s);
-				len += (print_func) ? print_func(temp) : _printf("%%%c", *s);
+				len += (print_func) ? print_func(temp) : _putchar('%') + _putchar(*s);
 				break;
 			}
 			}
 		}
 		else
 		{
-			if (*s == '%')
+			if(*s == '%')
 				len = -1;
 			else
 				len += _putchar(*s);

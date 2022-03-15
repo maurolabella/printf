@@ -14,10 +14,16 @@ int _putchar(char c)
 	static char buffer[1024];
 	static int i;
 
-	if (c == -1 || i >= 1024)
+	if (c == -1)
 	{
 		write(1, &buffer, i);
 		i = 0;
+	}
+	else if (i >= 1024)
+	{
+		write(1, &buffer, i);
+		buffer[0] = c;
+		i = 1;
 	}
 	else
 	{
