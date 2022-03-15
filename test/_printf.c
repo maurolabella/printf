@@ -19,6 +19,7 @@ int (*fetch_function(char s))(va_list)
 		{'x', print_hexa},
 		{'X', print_HEXA},
 		{'p', print_address},
+		{'b', print_binary},
 		{'\0', '\0'}};
 
 	for (i = 0; print_arr[i].c; i++)
