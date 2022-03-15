@@ -49,6 +49,8 @@ int print_hexa(va_list temp);
 int print_HEXA(va_list temp);
 int print_address(va_list temp);
 int print_binary(va_list temp);
+int print_bigS(va_list temp);
+int isNonAlphaNumeric(char c);
 
 /**control*/
 int wrong_inputs(const char *p);
