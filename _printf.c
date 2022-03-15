@@ -68,7 +68,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if(*s == '%')
+			if (*s == '%')
 				len = -1;
 			else
 				len += _putchar(*s);
