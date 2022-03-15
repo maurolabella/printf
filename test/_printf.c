@@ -59,7 +59,7 @@ int _printf(const char *format, ...)
 			default:
 			{
 				print_func = fetch_function(*s);
-				len += (print_func) ? print_func(temp) : _printf("%%%c", *s);
+				len += (print_func) ? print_func(temp) : _putchar('%') + _putchar(*s);
 				break;
 			}
 			}
