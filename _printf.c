@@ -65,7 +65,12 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-			len += ((*s != '%') ? (_putchar(*s)) : 0);
+		{
+			if (*s == '%')
+				len = -1;
+			else
+				len += _putchar(*s);
+		}
 		s++;
 	}
 	_putchar(-1);
