@@ -11,19 +11,19 @@
  * @temp: va_list arguments from _printf
  * Return: number of char printed
  */
-int print_bigS(va_list temp)
+int print_bigs(va_list temp)
 {
 	register short len = 0;
-	
-	char *res, *s = va_arg(l, char *);
-	
+
+	char *res, *s = va_arg(temp, char *);
+
 	if (!s)
-		return (_puts(NULL_STRING));
+		return (_puts("(null)"));
 	for (; *s; s++)
 	{
 		if (isNonAlphaNumeric(*s))
 		{
-			count += _puts("\\x");
+			len += _puts("\\x");
 			res = convert(*s, 16, 0);
 			if (!res[1])
 				len += _putchar('0');
@@ -57,7 +57,7 @@ int print_rev(va_list temp)
 	char *s = va_arg(temp, char *);
 
 	if (!s)
-		s = NULL_STRING;
+		s = "(null)";
 	while (s[len])
 		len++;
 	for (j = len - 1; j >= 0; j--)
@@ -89,15 +89,4 @@ int print_rot13(va_list temp)
 		}
 	}
 	return (j);
-}
-
-/**
- * print_percent - prints a percent
- * @temp: va_list arguments from _printf
- * Return: number of char printed
- */
-int print_percent(va_list temp)
-{
-	
-	return (_putchar('%'));
 }
