@@ -41,6 +41,6 @@ int print_address(va_list temp)
 	if (!n)
 		return (_puts("(nil)"));
 	str = (void *)convert(n, 16, 1);
-	len = _puts("0x7ffe") + _puts(str);
+	len = _puts("0x") + _puts(str);
 	return (len);
 }
