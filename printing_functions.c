@@ -6,7 +6,7 @@
  * Return: an integer in case of error
  */
 int print_char(va_list temp)
-{
+{		
 	return (_putchar(va_arg(temp, int)));
 }
 
@@ -19,8 +19,8 @@ int print_string(va_list temp)
 {
 	char *s = va_arg(temp, char *);
 
-	if (!s)
-		s = "(nil)";
+	if (s == NULL)
+		s = "(null)";
 	return (_puts(s));
 }
 
