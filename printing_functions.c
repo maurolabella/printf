@@ -6,7 +6,7 @@
  * Return: an integer in case of error
  */
 int print_char(va_list temp)
-{		
+{
 	return (_putchar(va_arg(temp, int)));
 }
 

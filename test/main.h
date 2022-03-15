@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <assert.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define ABS(x) (((x) < 0) ? -(x) : (x))
 
