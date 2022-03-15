@@ -124,13 +124,21 @@ int main()
 	printf("=====================\n");
 	int len = 0;
 	len = _printf("%S", "Holberton\nSchool");
+	
 	printf("\n");
+	
 	_printf("len = %i\n", len);
+	
 	len = _printf("%S", "holber\ton");
+	
 	printf("\n");
+	
 	_printf("len = %i\n", len);
+	
 	len = _printf("%S", NULL);
+	
 	printf("\n");
+	
 	_printf("len = %i\n", len);
 	
 	return (1);
