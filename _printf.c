@@ -21,6 +21,7 @@ int (*fetch_function(char s))(va_list, flags *)
 		{'p', print_address},
 		{'b', print_binary},
 		{'S', print_bigS},
+		{'r', print_rev},
 		{'\0', '\0'}};
 
 	for (i = 0; print_arr[i].c; i++)

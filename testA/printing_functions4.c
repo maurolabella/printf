@@ -15,3 +15,24 @@ int print_binary(va_list temp, flags *specs)
 
 	return (_puts(str));
 }
+
+/**
+ * print_rev - prints a string in reverse
+ * @temp: argument from _printf
+ * Return: length of the printed string
+ */
+int print_rev(va_list temp,flags *specs)
+{
+	register short len = 0, j;
+	char *s = va_arg(temp, char *);
+
+	(void)specs;
+	
+	if (!s)
+		s = "(null)";
+	while (s[len])
+		len++;
+	for (j = len - 1; j >= 0; j--)
+		_putchar(s[j]);
+	return (len);
+}

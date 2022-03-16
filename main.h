@@ -1,6 +1,7 @@
 #ifndef MYPROJECT
 #define MYPROJECT
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <assert.h>
@@ -52,6 +53,7 @@ int print_address(va_list temp, flags *specs);
 int print_binary(va_list temp, flags *specs);
 int print_bigS(va_list temp, flags *specs);
 int isNonAlphaNumeric(char c);
+int print_rev(va_list temp, flags *specs);
 
 /**control*/
 int wrong_inputs(const char *p);
