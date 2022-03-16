@@ -54,6 +54,7 @@ int print_binary(va_list temp, flags *specs);
 int print_bigS(va_list temp, flags *specs);
 int isNonAlphaNumeric(char c);
 int print_rev(va_list temp, flags *specs);
+int print_rot13(va_list temp, flags *specs);
 
 /**control*/
 int wrong_inputs(const char *p);
